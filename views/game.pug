@@ -1,0 +1,27 @@
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Ingrese datos
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div
+      h1 Ingrese Informacion
+      hr
+      hr
+      form(action="/game" method="POST") 
+        label(for="name1") 
+          h2 Ingrese Nombre Gamer 1
+        input#name1(type="text" name="nameGamer1")
+        label(for="name2")
+          h2 Ingrese Nombre Gamer 2
+        input#name2(type="text" name="nameGamer2")
+        label(for="name3")
+          h2 Ingrese Nombre Gamer 3
+        input#name3(type="text" name="nameGamer3")
+        label(for="name3")
+          h2 Ingrese apuesta del juego
+        input#name3(type="text" name="apuesta")
+        br
+        button(type="submit") Continuar

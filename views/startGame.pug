@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body 
+    div 
+      h1 El juego de los dados
+      hr
+      hr
+      a(href="/startGame/consulta")
+        button() Consultar Juegos
+      hr
+      hr
+      a(href="/startGame/ganadores")
+        button() Mostrar Ganadores
+      br
+      hr
+      hr
+      a(href="/")
+        button() Reiniciar Juego
+
+      p=infopug 
