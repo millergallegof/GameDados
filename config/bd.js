@@ -1,9 +1,21 @@
-
+/* import of required packages */
 const mongoose = require('mongoose');
-
-// rutra donde se va a crear la base de datos
+/* rutra where the database is to be created */
 const mongodb = 'mongodb://localhost/createGame';
 
+/**
+* [function in which the connection to the database 
+    is established by means of the moongose package ]
+*
+*
+* @throws If presented by the project
+*
+* @author Miller Esteban Gallego Forero - miller.gallegof@gmail.com
+*
+* @since Version 1
+*
+*
+*/
 const conexionBD = async () => {
     try {
         const baseDatos = await mongoose.connect(mongodb, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -14,4 +26,5 @@ const conexionBD = async () => {
     }
 }
 
+/* module import */
 module.exports = conexionBD;

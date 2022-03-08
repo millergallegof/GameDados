@@ -10,10 +10,12 @@ html(lang="en")
     body
         -const games = infopug
         -var idGames = id
+        -var contador = 0
         div
             table(class="table table-striped")
                 thead(class="thead-dark")
                     tr
+                        th(scope="col") No.
                         th(scope="col") ID
                         th(scope="col") Tipo de Apuesta
                         th(scope="col") Gamers
@@ -22,8 +24,9 @@ html(lang="en")
                 tbody#data
                     each game in games
                         -var players = game.gamers
-                        -var contador = 1
+                        -contador = contador + 1
                         tr  
+                            td #{contador}
                             td #{game._id}
                             td #{game.type}
                             td: table(class="table" )

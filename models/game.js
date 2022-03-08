@@ -1,16 +1,23 @@
-//CREACION DE ESQUEMA JUGADORES JUEGO DADOS
+/* import of required packages */
 const mongoose = require('mongoose');
 const uuid = require('uuid');
-
-//creacion variable esquema
-const Schema = mongoose.Schema;
-
-//uso de plugin de eliminacion
 const mongooseSoftDelete = require('mongoose-delete');
 
-// console.log(uuid.v4());
+/* Schema variable creation - Model */
+const Schema = mongoose.Schema;
 
-//Creacion del Schema
+/**
+* [Creation of the Schema for the use and storage of elements in the database, using moongose specific methods.]
+*
+*
+* @throws If presented by the project
+*
+* @author Miller Esteban Gallego Forero - miller.gallegof@gmail.com
+*
+* @since Version 1
+*
+*
+*/
 const gameSchema = new Schema({
     id: {
         type: String,
@@ -60,7 +67,8 @@ const gameSchema = new Schema({
     }
 }, { timestamps: true });
 
-//plugin borrado de datos
+/* the logical log deletion plugin is used */
 gameSchema.plugin(mongooseSoftDelete);
 
+/* the module is exported for use in future files */
 module.exports = Game = mongoose.model('Game', gameSchema)
